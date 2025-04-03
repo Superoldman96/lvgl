@@ -43,8 +43,9 @@ void lv_example_freetype_2_vector_font(uint32_t font_size, uint32_t border_width
     /*Create a label with the new style*/
     lv_obj_t * label = lv_label_create(lv_screen_active());
     lv_obj_add_style(label, &style, 0);
-    lv_label_set_text(label, "Hello world\nI'm a font created with FreeType");
-    lv_obj_center(label);
+    lv_label_set_text(label,
+                      "Hello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\n"
+                      "I'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\nHello world\nI'm a font created with FreeType\n");
 
 }
 
@@ -87,6 +88,18 @@ void lv_example_freetype_2(void)
     lv_obj_center(label);
 }
 #else
+
+void lv_example_freetype_2_vector_font(uint32_t font_size, uint32_t border_width)
+{
+    /*TODO
+     *fallback for online examples*/
+    LV_UNUSED(font_size);
+    LV_UNUSED(border_width);
+
+    lv_obj_t * label = lv_label_create(lv_screen_active());
+    lv_label_set_text(label, "FreeType is not installed");
+    lv_obj_center(label);
+}
 
 void lv_example_freetype_2(void)
 {
